@@ -28,4 +28,9 @@ def get_triangle_numbers():
         yield n
 
 def get_divisors(i):
-    return [1, i]
+    yield 1
+    for div in range(2, (i // 2) + 1):
+        if i % div == 0:
+            yield div
+    yield i
+
