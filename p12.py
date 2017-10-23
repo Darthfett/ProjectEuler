@@ -34,3 +34,13 @@ def get_divisors(i):
             yield div
     yield i
 
+def p12(least_divisors):
+    for n in get_triangle_numbers():
+        divisors = list(get_divisors(n))
+        if len(divisors) > least_divisors:
+            print(n)
+            # print(divisors)
+            return
+
+if __name__ == '__main__':
+    p12(500)
