@@ -20,7 +20,12 @@ What is the value of the first triangle number to have over five hundred divisor
 """
 
 def get_triangle_numbers():
-    return []
+    n = 0
+    i = 0
+    while True:
+        i += 1
+        n += i
+        yield n
 
 def get_divisors(i):
     return [1, i]
